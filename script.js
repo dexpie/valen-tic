@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =============================================
        3. TYPEWRITER EFFECT (SECTION 2)
        ============================================= */
-const letterText = "Thank you for being such a strong and amazing person. I'm really proud of you. You've done so well until this very moment, chasing your dreams and fighting your own battles with grace. You always keep trying to stay on your own path and pursue what matters most. You never give up, even when deep down you're actually so tired.\n\nI truly believe that one day, you'll look back at all of this and smile proudly because you made it through every hard moment and every part of the process.\n\nNever forget to be grateful for how far you've come, and keep moving forward with a happy heart. May your days be filled with beautiful blessings and endless joy. Keep shining, beautiful souls....✨";
+const letterText = "Dear you,\n\nAku cuma mau bilang: kamu itu lucu, keren, dan agak bahaya buat kesehatan jantung. Soalnya tiap kamu muncul, mood langsung naik kayak baterai baru dicas.\n\nHari ini kamu wajib senyum ya. Kalau capek, istirahat dulu. Kalau badmood, sini aku kasih virtual hug. Kalau lapar, ya makan dulu, jangan cuma kuat di caption doang.\n\nThank you for being you. The soft, sweet, sometimes random, but always special version of you. I hope this tiny surprise makes your day at least 1% brighter. Kalau lebih dari itu, berarti project ini sukses besar.\n\nPlease keep shining, but jangan terlalu terang juga. Nanti aku silau terus makin suka.";
     let typewriterStarted = false;
     const typeEl = document.getElementById('typewriterText');
     const nextBtn2 = document.getElementById('btn2');
