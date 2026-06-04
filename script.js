@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const gateSubtitle = document.getElementById('gateSubtitle');
     const gateStickers = document.getElementById('gateStickers');
     const cuteToasts = document.getElementById('cuteToasts');
+    const gateDayStep = document.getElementById('gateDayStep');
+    const gateSpecialStep = document.getElementById('gateSpecialStep');
+    const gateDayBtns = document.querySelectorAll('.gate-day-btn');
+    const gateOpenBtn = document.getElementById('gateOpenBtn');
 
     let isMusicPlaying = false;
     let noMoves = 0;
@@ -50,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Tombolnya pemalu, dia lari dulu~',
         'Ups kepeleset, pindah tempat dulu!',
         'Ngga bukan opsi hari ini hihi.'
+    ];
+    const dayToasts = [
+        'That is what I wanted to hear.',
+        'Good, keep that smile ready.',
+        'Perfect answer, honestly.'
+    ];
+    const specialToasts = [
+        'Tiny surprise loading...',
+        'Okay, this part is cute.',
+        'Ready for the special thing?'
     ];
     const yesToasts = ['YAYYY 💖', 'Aaaaa lucuuu!', 'Hati aku: stonks 📈💘'];
     const nextToasts = [
@@ -95,7 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function celebrateYesChoice() {
-        if (!gateActions) return;
+        const celebrationTarget = gateStickers || gateActions;
+        if (!celebrationTarget) return;
         for (let i = 0; i < 14; i++) {
             const conf = document.createElement('span');
             conf.className = 'gate-sticker';
@@ -103,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             conf.style.left = Math.floor(Math.random() * 96) + '%';
             conf.style.bottom = '-6px';
             conf.style.animationDuration = '1s';
-            gateActions.appendChild(conf);
+            celebrationTarget.appendChild(conf);
             setTimeout(() => conf.remove(), 1000);
         }
     }
@@ -165,6 +180,29 @@ document.addEventListener('DOMContentLoaded', () => {
         gateYesBtn.addEventListener('click', () => {
             celebrateYesChoice();
             showCuteToast(randomFrom(yesToasts));
+            stopGateStickers();
+            gateScreen.classList.add('hidden');
+        });
+    }
+
+    gateDayBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if (gateSubtitle && btn.dataset.dayAnswer) {
+                gateSubtitle.textContent = `${btn.dataset.dayAnswer} sounds lovely.`;
+            }
+            celebrateYesChoice();
+            showCuteToast(randomFrom(dayToasts));
+            setTimeout(() => {
+                if (gateDayStep) gateDayStep.classList.add('gate-step-hidden');
+                if (gateSpecialStep) gateSpecialStep.classList.remove('gate-step-hidden');
+                showCuteToast(randomFrom(specialToasts));
+            }, 500);
+        });
+    });
+
+    if (gateOpenBtn && gateScreen) {
+        gateOpenBtn.addEventListener('click', () => {
+            celebrateYesChoice();
             stopGateStickers();
             gateScreen.classList.add('hidden');
         });

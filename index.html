@@ -55,17 +55,31 @@
     <!-- Intro Gate -->
     <div class="gate-screen" id="gateScreen">
       <div class="gate-card">
-        <p class="gate-title">Kamu Suka Aku Ngga?</p>
-        <p class="gate-subtitle" id="gateSubtitle">Jawab jujur yaa, jangan malu-malu!</p>
-        <div class="gate-stickers" id="gateStickers"></div>
-        <div class="gate-actions" id="gateActions">
-          <button class="gate-btn gate-btn-yes" id="gateYesBtn" type="button">
-            Iyaaa
-          </button>
-          <button class="gate-btn gate-btn-no" id="gateNoBtn" type="button">
-            Ngga
-          </button>
+        <div class="gate-step" id="gateDayStep">
+          <p class="gate-title">How's your day?</p>
+          <p class="gate-subtitle" id="gateSubtitle">Pick one, because bad answers are not invited today.</p>
+          <div class="gate-actions gate-day-options" id="gateActions">
+            <button class="gate-btn gate-day-btn" type="button" data-day-answer="Happy">
+              Happy
+            </button>
+            <button class="gate-btn gate-day-btn" type="button" data-day-answer="Pretty good">
+              Pretty good
+            </button>
+            <button class="gate-btn gate-day-btn" type="button" data-day-answer="Better now">
+              Better now
+            </button>
+          </div>
         </div>
+        <div class="gate-step gate-step-hidden" id="gateSpecialStep">
+          <p class="gate-title">I have something special for you.</p>
+          <p class="gate-subtitle">Tiny surprise, big feelings. Ready?</p>
+          <div class="gate-actions gate-special-actions">
+            <button class="gate-btn gate-btn-yes" id="gateOpenBtn" type="button">
+              Show me
+            </button>
+          </div>
+        </div>
+        <div class="gate-stickers" id="gateStickers"></div>
       </div>
     </div>
 
