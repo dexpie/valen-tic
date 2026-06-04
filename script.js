@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =============================================
        3. TYPEWRITER EFFECT (SECTION 2)
        ============================================= */
-const letterText = "Dear you,\n\nAku cuma mau bilang: kamu itu lucu, keren, dan agak bahaya buat kesehatan jantung. Soalnya tiap kamu muncul, mood langsung naik kayak baterai baru dicas.\n\nHari ini kamu wajib senyum ya. Kalau capek, istirahat dulu. Kalau badmood, sini aku kasih virtual hug. Kalau lapar, ya makan dulu, jangan cuma kuat di caption doang.\n\nThank you for being you. The soft, sweet, sometimes random, but always special version of you. I hope this tiny surprise makes your day at least 1% brighter. Kalau lebih dari itu, berarti misinya berhasil: bikin kamu senyum.\n\nPlease keep shining, but jangan terlalu terang juga. Nanti aku silau terus makin suka.";
+const letterText = "Dear you,\n\nAku mau laporan penting: hari ini kamu tetap lucu. Setelah dicek berkali-kali, hasilnya valid, akurat, dan tidak bisa dibantah.\n\nKalau kamu senyum, dunia tuh rasanya langsung lebih rapi. Awan jadi sopan, lagu jadi enak, dan aku jadi lupa cara biasa aja.\n\nJadi tolong hari ini jangan lupa makan, jangan lupa istirahat, dan jangan lupa bahwa kamu punya efek samping: bikin orang kangen tiba-tiba.\n\nThank you for being the softest little chaos in the best way. Kamu itu campuran antara manis, gemes, dan \"ih kok bisa sih orang kayak gini ada?\"\n\nSemoga surprise kecil ini bikin kamu senyum. Kalau cuma senyum dikit juga gapapa. Aku tetap anggap itu kemenangan nasional.";
     let typewriterStarted = false;
     const typeEl = document.getElementById('typewriterText');
     const nextBtn2 = document.getElementById('btn2');
